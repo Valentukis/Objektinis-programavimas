@@ -156,6 +156,7 @@ int main(){
                     duom >> laik.var >> laik.pav;
                     for (int i = 0; i < nd_sk; i++) {
                         duom >> ivestis;
+                        sum += ivestis;
                         laik.paz.push_back(ivestis);
 
                     }
@@ -174,7 +175,7 @@ int main(){
                         laik.galutinis_pagal_vid = (0.4 * laik.vidurkis + 0.6 * laik.egz);
                         laik.galutinis_pagal_med = (0.4 * laik.mediana + 0.6 * laik.egz);
                         grupe.emplace_back(std::move(laik)); //Vietoje push_back()
-
+                        sum = 0;
                 }
                 
             }
